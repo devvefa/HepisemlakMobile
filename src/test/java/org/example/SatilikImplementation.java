@@ -137,8 +137,8 @@ public class SatilikImplementation {
 
 
 
-    @Step("print filter")
-    public void implementation5() {
+    @Step("Check for Tags in the filter area")
+    public void checkForTagsInFilterArea() {
 
       assertEquals(satilik, satilikPage.filtredData());
         System.out.println("-------->"+satilikPage.filtredData());

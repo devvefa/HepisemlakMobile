@@ -8,7 +8,8 @@ Satılık Mobil
 * Click on “Satılık”
 * Check the satılık page is opened.
 * Make a search for satılık:
-* print filter
+* Check for Tags in the filter area
+
 
 
 
@@ -17,7 +18,7 @@ Kiralık
 * Go to Home Page
 * Check the home page is opened
 * Click on “Kiralık”
-*Check the kiralık page is opened.
+* Check the kiralık page is opened.
 * Make a search for kiralık:
 * Click on Ara Button
 * select 3rd item from list
