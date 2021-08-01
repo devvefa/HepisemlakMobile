@@ -1,6 +1,6 @@
 #  # Selenium - Page Object Model   With Gauge
 This is a sample project to demonstrate the implementation of page object model framework and how it can be used in selenium to automate web application "[https://www.hepsiemlak.com/]" with BDD software development process.
-
+ 
 ### What is the testcase  example:
 
 **First Case**
