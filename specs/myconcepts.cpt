@@ -1,0 +1,36 @@
+Created by Dell on 8/1/2021
+
+This is a concept file with following syntax for each concept.
+# Make a search for satılık:
+
+* click on filter
+
+* Enter City as  "Yalova"
+
+* Enter Country as
+| table     |
+| Merkez   |
+| Termal|
+
+* Enter category as  "İşyeri"
+* Enter minprice  as "100000"
+* Enter maxprice  as "2000000"
+* Enter building age as
+|bulilding_age|
+| Sıfır Bina|
+| 1-5       |
+| 6-10      |
+# Make a search for kiralık:
+* click on filters
+* Enter City as "Yalova"
+* Enter Countries as
+| table     |
+| Armutlu   |
+| Merkez    |
+* Enter category as "Konut"
+* Enter room type as
+| room_type |
+| 1+1|
+| 2+1|
+
+* Select with in Site
