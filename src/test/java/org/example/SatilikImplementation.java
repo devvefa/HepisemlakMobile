@@ -50,7 +50,7 @@ public class SatilikImplementation {
     @Step({"Satılık sayfasına gidilir.", "Click on “Satılık”"})
     public void clickOnSatilik() {
         mainPage.clickOnSatilik();
-        logger.info("Açılan pencereden Gömlek Seçildi");
+        logger.info("Menüden satılığa tıklanır");
 
     }
 
@@ -59,10 +59,10 @@ public class SatilikImplementation {
         try {
             assertEquals(SATILIK_PAGE_TITLE, satilikPage.getTitle());
 
-            logger.info("Ana sayfanın açıldığı kontrol edilidi");
+            logger.info("Satılık sayfasının  açıldığı kontrol edilidi");
 
         } catch (Exception e) {
-            logger.warn("Yanlış Siteye Giris Yapildi");
+            logger.warn("Yanlış Siteye gidildi");
         }
     }
 
@@ -72,12 +72,15 @@ public class SatilikImplementation {
         satilikPage.clickOnFilter();
         satilikPage.sleep(450L);
         satilik.add( satilikPage.getCategoryText());
+        logger.info("filtirele tıklandı");
+
     }
 
     @Step("Enter City as  <value>")
     public void selcetCity(String value) {
       //  String a="Yalova";
         satilikPage.choiceCity(value);
+        logger.info("İl seçildi ");
 
     }
 
@@ -96,6 +99,8 @@ public class SatilikImplementation {
 
         }
             satilikPage.applyFilter();
+        logger.info("Ilçeler seçildi ");
+
     }
 
     @Step("Enter category as  <type>")
@@ -103,6 +108,7 @@ public class SatilikImplementation {
         satilikPage.selectCategory();
         satilik.add(type);
 
+        logger.info("Kategori seçildi ");
 
     }
 
@@ -110,12 +116,15 @@ public class SatilikImplementation {
     public void enterMinPrice(String value) {
         satilikPage.enterMinPrice(value);
         satilik.add(value);
+        logger.info("En Az fiyat girildi ");
+
     }
 
     @Step("Enter maxprice  as <value>")
     public void enterMaxPrice(String value) {
         satilikPage.enterMaxPrice(value);
         satilik.add(value);
+        logger.info("En Çok fiyat girildi ");
 
     }
 
@@ -132,6 +141,7 @@ public class SatilikImplementation {
 
         }
         satilikPage.applyBuildingAgeFilter();
+        logger.info("Bina yaşları seçildi ");
 
     }
 
@@ -141,8 +151,7 @@ public class SatilikImplementation {
     public void checkForTagsInFilterArea() {
 
       assertEquals(satilik, satilikPage.filtredData());
-        System.out.println("-------->"+satilikPage.filtredData());
-        System.out.println("-------->"+satilik);
+        logger.info("filtre alanındaki değerler girilen değerler ile aynı olduğu kontrol edildi");
 
     }
 }
