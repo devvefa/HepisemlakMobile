@@ -6,7 +6,7 @@ import com.thoughtworks.gauge.TableRow;
 import driver.Driver;
 import org.apache.log4j.Logger;
 
-import screen.MainScreeen;
+import screen.MainPage;
 import screen.SatilikPage;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 
 public class SatilikImplementation {
 
-    MainScreeen mainScreeen;
+    MainPage mainPage;
     SatilikPage satilikPage;
     private static Logger logger = Logger.getLogger(SatilikImplementation.class.getName());
     ArrayList<String> satilik = new ArrayList<>();
@@ -26,10 +26,10 @@ public class SatilikImplementation {
     @Step({"Ana sayafa'ya gidilir",
             "Go to Main Page"})
     public void goToMainPage() {
-        mainScreeen = new MainScreeen(Driver.driver);
+        mainPage = new MainPage(Driver.driver);
         satilikPage = new SatilikPage(Driver.driver);
-        mainScreeen.getHomePage();
-        mainScreeen.closeCookie();
+        mainPage.getHomePage();
+        mainPage.closeCookie();
         logger.info("Hepsiemlak Sayfası Açıldı");
 
     }
@@ -38,7 +38,7 @@ public class SatilikImplementation {
     @Step( "Check the main page is opened")
     public void checkMainPageIsOpened() {
         try {
-            assertEquals(HEPSIEMLAK_PAGE_TITLE, mainScreeen.getTitle());
+            assertEquals(HEPSIEMLAK_PAGE_TITLE, mainPage.getTitle());
             logger.info("Ana sayfanın açıldığı kontrol edilidi");
 
         } catch (Exception e) {
@@ -49,7 +49,7 @@ public class SatilikImplementation {
 
     @Step({"Satılık sayfasına gidilir.", "Click on “Satılık”"})
     public void clickOnSatilik() {
-        mainScreeen.clickOnSatilik();
+        mainPage.clickOnSatilik();
         logger.info("Açılan pencereden Gömlek Seçildi");
 
     }

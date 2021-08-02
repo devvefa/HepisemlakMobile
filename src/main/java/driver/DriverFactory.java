@@ -1,21 +1,16 @@
 package driver;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DriverFactory {
-    private static DesiredCapabilities  capabilities;
-    public static WebDriver getDriver() throws MalformedURLException {
+    public static WebDriver getDriver()  {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         Map<String, Object> deviceMetrics = new HashMap<>();
 

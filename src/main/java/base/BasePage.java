@@ -1,7 +1,5 @@
 package base;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -31,11 +29,11 @@ public class BasePage {
 
 
     public List<WebElement> findElements(By by) {
-        return (List)this.wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+        return this.wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
     }
     public void clickElement(By by) {
         WebElement element = this.findElement(by);
-        ((WebElement) this.wait.until(ExpectedConditions.elementToBeClickable(element))).click();
+          this.wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
 
@@ -70,11 +68,11 @@ public class BasePage {
 
 
 
-    public void sleep(Long milliScond){
+    public void sleep(Long milliSecond){
         try {
-            Thread.sleep(milliScond);
+            Thread.sleep(milliSecond);
         }catch (Exception e){
-
+            Thread.currentThread().interrupt();
         }
     }
 

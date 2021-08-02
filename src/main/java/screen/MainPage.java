@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import static constant.Constant.*;
 
 
-public class MainScreeen extends BasePage {
-    public MainScreeen(WebDriver driver) {
+public class MainPage extends BasePage {
+    public MainPage(WebDriver driver) {
         super(driver);
     }
 
